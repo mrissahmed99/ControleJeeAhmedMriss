@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box">
+    <h1 align="center">attribuez ... </h1>
+    <form name='f' th:action="@{/admin/savePatientMedecin}" method="post">
+        <label >Patient : </label><br>
+        <span th:text="${patient.id}"></span> <input type="text" name="id" th:value="${patient.id}" hidden><br>
+        <span th:text="${patient.nom}"></span><br>
+        <label>Nom medecin</label>
+        <div class="inputBox">
+
+            <input type="text" name="nomMedecin"  required>
+
+        </div>
+
+
+
+        <input type="submit" name="submit" value="Attribuer">
+
+
+
+
+
+    </form>
+</div>
+
+</body>
+</html>
